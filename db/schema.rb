@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_02_20_105222) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_20_142613) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -20,4 +20,18 @@ ActiveRecord::Schema[8.0].define(version: 2025_02_20_105222) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "streetarts", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
+    t.string "still_existing"
+    t.string "date_of_appearance"
+    t.text "summary"
+    t.bigint "artist_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["artist_id"], name: "index_streetarts_on_artist_id"
+  end
+
+  add_foreign_key "streetarts", "artists"
 end

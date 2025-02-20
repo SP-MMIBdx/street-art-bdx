@@ -1,0 +1,11 @@
+<% content_for :title, "New streetart" %>
+
+<h1>New streetart</h1>
+
+<%= render "form", streetart: @streetart %>
+
+<br>
+
+<div>
+  <%= link_to "Back to streetarts", streetarts_path %>
+</div>

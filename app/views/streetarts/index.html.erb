@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Streetarts" %>
+
+<h1>Streetarts</h1>
+
+<div id="streetarts">
+  <% @streetarts.each do |streetart| %>
+    <%= render streetart %>
+    <p>
+      <%= link_to "Show this streetart", streetart %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New streetart", new_streetart_path %>

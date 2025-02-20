@@ -1,0 +1,12 @@
+<% content_for :title, "Editing streetart" %>
+
+<h1>Editing streetart</h1>
+
+<%= render "form", streetart: @streetart %>
+
+<br>
+
+<div>
+  <%= link_to "Show this streetart", @streetart %> |
+  <%= link_to "Back to streetarts", streetarts_path %>
+</div>

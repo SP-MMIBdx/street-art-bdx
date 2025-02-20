@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @streetart %>
+
+<div>
+  <%= link_to "Edit this streetart", edit_streetart_path(@streetart) %> |
+  <%= link_to "Back to streetarts", streetarts_path %>
+
+  <%= button_to "Destroy this streetart", @streetart, method: :delete %>
+</div>
