@@ -1,18 +1,21 @@
 <p style="color: green"><%= notice %></p>
 
-<% content_for :title, "Artists" %>
+<% content_for :title, "Streetarts" %>
 
-<h1>Streetartists in Bordeaux</h1>
+<h1>Streetart in Bordeaux</h1>
 
-<div id="artists">
+<div class="row">
   <% @artists.each do |artist| %>
-    <%= render artist %>
-    <p>
-      <%= link_to "See Artist", artist %>
-    </p>
+    <div class="col-lg-3">
+      <div class="card mb-4 shadow-sm" style="background-color: #800020; color: white;">
+          <img src="<%= artist.photo %>" class="card-img-top" alt="<%= artist.name %>">
+          <div class="card-body">
+              <h5 class="card-title"><%= artist.name %></h5>
+              <%= link_to "Show this artist", artist, class: 'btn btn-light' %>
+          </div>
+      </div>
+  </div>
   <% end %>
 </div>
 
-
-
-<button type="button" class="btn btn-dark"> <%= link_to "Add A New Artist", new_artist_path %> </button>
+<%= link_to "Add New", new_artist_path %>

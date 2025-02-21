@@ -1,10 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @artist %>
+<h1><%= @artist.name %></h1>
+
+<img src="<%= @artist.photo %>" class="img-fluid" alt="<%= @artist.name %>">
+<p><strong>Biography</strong> <%= @artist.description %></p>
 
 <div>
   <%= link_to "Edit this artist", edit_artist_path(@artist) %> |
   <%= link_to "Back to artists", artists_path %>
 
-  <%= button_to "Delete this artist", @artist, method: :delete %>
+  <%= button_to "Delete this artist entry", @artist, method: :delete %>
 </div>
