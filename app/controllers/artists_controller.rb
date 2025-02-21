@@ -65,6 +65,6 @@ class ArtistsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def artist_params
-      params.expect(artist: [ :name, :photo ])
+      params.expect(artist: [ :name, :photo, :description ])
     end
 end
