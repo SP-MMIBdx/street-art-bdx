@@ -1,3 +1,4 @@
+<div class="p-3" style="background-color: #800020; color: white;">
 <h1><%= @streetart.name %></h1>
 
 <img src="<%= @streetart.photo %>" class="img-fluid" alt="<%= @streetart.name %>">
@@ -7,8 +8,10 @@
 <p><strong>Summary:</strong> <%= @streetart.summary %></p>
 <%= link_to @streetart.artist, @streetart.artist, class: 'btn btn-light' %>
 <div>
-  <%= link_to "Edit this streetart", edit_streetart_path(@streetart) %> |
-  <%= link_to "Back to streetarts", streetarts_path %>
+  <%= link_to "Edit this streetart", edit_streetart_path(@streetart), class: "text-white" %> |
+  <%= link_to "Back to streetarts", streetarts_path, class: "text-white" %>
 
   <%= button_to "Delete this streetart entry", @streetart, method: :delete %>
+</div>
+
 </div>
