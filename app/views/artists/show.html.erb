@@ -1,3 +1,5 @@
+<div class="p-3" style="background-color: #800020; color: white;">
+
 <p style="color: green"><%= notice %></p>
 
 <h1><%= @artist.name %></h1>
@@ -5,9 +7,10 @@
 <img src="<%= @artist.photo %>" class="img-fluid" alt="<%= @artist.name %>">
 <p><strong>Biography</strong> <%= @artist.description %></p>
 
-<div>
+  <div>
   <%= link_to "Edit this artist", edit_artist_path(@artist) %> |
   <%= link_to "Back to artists", artists_path %>
 
   <%= button_to "Delete this artist entry", @artist, method: :delete %>
+  </div>
 </div>
