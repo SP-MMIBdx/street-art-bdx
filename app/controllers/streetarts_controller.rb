@@ -65,6 +65,6 @@ class StreetartsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def streetart_params
-      params.expect(streetart: [ :name, :location, :still_existing, :date_of_appearance, :summary, :artist_id, artist_ids: [] ])
+      params.expect(streetart: [ :name, :location, :still_existing, :date_of_appearance, :summary, :photo, :artist_id, artist_ids: [] ])
     end
 end
