@@ -1,12 +1,8 @@
-<div id="<%= dom_id artist %>">
-  <p>
-    <strong>Name:</strong>
-    <%= artist.name %>
-  </p>
 
-  <p>
-    <strong>Photo:</strong>
-    <Img src= <%= artist.photo %>>
-  </p>
 
+<div id="<%= dom_id artist %>" class="card mb-4 shadow-sm" style="width: 18rem;">
+  <img src="<%= artist.photo %>" class="card-img-top" alt="<%= artist.name %>">
+  <div class="card-body">
+    <h5 class="card-title"><%= artist.name %></h5>
+  </div>
 </div>
