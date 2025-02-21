@@ -4,12 +4,18 @@
 
 <h1>Streetart in Bordeaux</h1>
 
-<div id="streetarts">
+<div class="row">
   <% @streetarts.each do |streetart| %>
-    <%= render streetart %>
-    <p>
-      <%= link_to "Show this streetart", streetart %>
-    </p>
+    <div class="col-lg-3">
+      <div class="card mb-4 shadow-sm" style="background-color: #800020; color: white;">
+          <img src="<%= streetart.photo %>" class="card-img-top" alt="<%= streetart.name %>">
+          <div class="card-body">
+              <h5 class="card-title"><%= streetart.name %></h5>
+              <%= link_to "Show this streetart", streetart, class: 'btn btn-light' %>
+              <%= link_to streetart.artist, streetart.artist, class: 'btn btn-light' %>
+          </div>
+      </div>
+  </div>
   <% end %>
 </div>
 

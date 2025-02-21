@@ -1,7 +1,11 @@
-<p style="color: green"><%= notice %></p>
+<h1><%= @streetart.name %></h1>
 
-<%= render @streetart %>
-
+<img src="<%= @streetart.photo %>" class="img-fluid" alt="<%= @streetart.name %>">
+<p><strong>Location:</strong> <%= @streetart.location %></p>
+<p><strong>Still existing:</strong> <%= @streetart.still_existing %></p>
+<p><strong>Date of appearance:</strong> <%= @streetart.date_of_appearance %></p>
+<p><strong>Summary:</strong> <%= @streetart.summary %></p>
+<%= link_to @streetart.artist, @streetart.artist, class: 'btn btn-light' %>
 <div>
   <%= link_to "Edit this streetart", edit_streetart_path(@streetart) %> |
   <%= link_to "Back to streetarts", streetarts_path %>
